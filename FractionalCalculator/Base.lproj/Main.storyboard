@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RN9-U8-DMx" customClass="CalcDisplayView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htm-oa-LMk">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Htm-oa-LMk" firstAttribute="trailing" secondItem="RN9-U8-DMx" secondAttribute="trailingMargin" id="26r-Bq-fhU"/>
+                                    <constraint firstItem="Htm-oa-LMk" firstAttribute="bottom" secondItem="RN9-U8-DMx" secondAttribute="bottomMargin" id="42V-U1-mhK"/>
+                                    <constraint firstItem="Htm-oa-LMk" firstAttribute="top" secondItem="RN9-U8-DMx" secondAttribute="topMargin" id="Zcb-67-Evt"/>
+                                    <constraint firstItem="Htm-oa-LMk" firstAttribute="leading" secondItem="RN9-U8-DMx" secondAttribute="leadingMargin" id="ngq-qU-bPs"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Htm-oa-LMk"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="26r-Bq-fhU"/>
+                                        <exclude reference="42V-U1-mhK"/>
+                                        <exclude reference="Zcb-67-Evt"/>
+                                        <exclude reference="ngq-qU-bPs"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="Htm-oa-LMk"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="26r-Bq-fhU"/>
+                                        <include reference="42V-U1-mhK"/>
+                                        <include reference="Zcb-67-Evt"/>
+                                        <include reference="ngq-qU-bPs"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkn-65-HOe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.95000000000000007" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="0"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8V1-tW-REz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkf-uE-qJa">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="="/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="equalsButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rbb-Pp-IJI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erU-me-ORn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="+"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hnT-Ts-pp2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRe-cn-cQY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RHN-vm-oFB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHh-UW-d63">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4j2-gD-D64"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aW2-tS-pbR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eAT-SD-FDb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4U-Ip-8xm">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="−"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="subtractButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5hb-Z8-RdO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVu-u6-SKd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="6"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yhh-SE-6nm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9td-Qi-Y67">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1Ng-i1-JeA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykP-98-iE9">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="4"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="La0-w1-aBF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2c-XK-BpQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="×"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="multiplyButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mI6-Xh-OhH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpX-YF-HEb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="9"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WlM-J1-df0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LD-JK-XM5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="8"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2S6-5h-PMG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H15-E6-E0W">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="7"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BNM-6n-9be"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vv-l1-zhQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="÷"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="divideButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tef-23-cdb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjV-c6-5ef">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.80000000000000004" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="√"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="squarerootButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="M58-RF-uN8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4X-x2-CgQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.80000000000000004" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="±"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="negateButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tQB-uz-F4z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUl-T5-Qgh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="MVc-qk-R1n"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="AC"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MVc-qk-R1n"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                    <mask key="constraints">
+                                        <include reference="MVc-qk-R1n"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="acButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hbq-uE-6qx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jei-bU-VpZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="over"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="overButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QJz-OY-Qdw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9td-Qi-Y67" firstAttribute="leading" secondItem="4LD-JK-XM5" secondAttribute="leading" id="0mc-Ke-7gu"/>
+                            <constraint firstAttribute="bottom" secondItem="Gkn-65-HOe" secondAttribute="bottom" constant="20" symbolic="YES" id="1fw-cq-tcL"/>
+                            <constraint firstItem="H15-E6-E0W" firstAttribute="width" secondItem="Gkn-65-HOe" secondAttribute="width" id="1gt-o3-0cq"/>
+                            <constraint firstItem="w4X-x2-CgQ" firstAttribute="baseline" secondItem="wjV-c6-5ef" secondAttribute="baseline" id="3ME-fy-K9V"/>
+                            <constraint firstItem="ykP-98-iE9" firstAttribute="baseline" secondItem="9td-Qi-Y67" secondAttribute="baseline" id="3jG-6P-7tH"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="AHh-UW-d63" secondAttribute="width" id="54l-9h-bBn"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="jkf-uE-qJa" secondAttribute="height" id="7hd-oV-v8i"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="aW2-tS-pbR" secondAttribute="height" id="8g4-Zi-zwI"/>
+                            <constraint firstItem="GpX-YF-HEb" firstAttribute="baseline" secondItem="4LD-JK-XM5" secondAttribute="baseline" id="9HD-bY-d4h"/>
+                            <constraint firstItem="4LD-JK-XM5" firstAttribute="baseline" secondItem="H15-E6-E0W" secondAttribute="baseline" id="9mT-7n-PQM"/>
+                            <constraint firstItem="jkf-uE-qJa" firstAttribute="leading" secondItem="erU-me-ORn" secondAttribute="leading" id="9rD-K2-Q8c"/>
+                            <constraint firstItem="Jei-bU-VpZ" firstAttribute="leading" secondItem="AHh-UW-d63" secondAttribute="leading" id="AGx-l9-t2C"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="GpX-YF-HEb" secondAttribute="width" id="Alx-Cc-6hO"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="wjV-c6-5ef" secondAttribute="width" id="CFV-Ib-ZH1"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="ykP-98-iE9" secondAttribute="width" id="Dbg-BP-lRb"/>
+                            <constraint firstItem="0Vv-l1-zhQ" firstAttribute="trailing" secondItem="RN9-U8-DMx" secondAttribute="trailing" id="E7A-hT-HGT"/>
+                            <constraint firstItem="vUl-T5-Qgh" firstAttribute="top" secondItem="RN9-U8-DMx" secondAttribute="bottom" constant="8" symbolic="YES" id="Eo5-D8-0YP"/>
+                            <constraint firstItem="w4X-x2-CgQ" firstAttribute="leading" secondItem="4LD-JK-XM5" secondAttribute="leading" id="Eqm-UI-Zps"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="9td-Qi-Y67" secondAttribute="width" id="Eze-ro-wG0"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="0Vv-l1-zhQ" secondAttribute="width" id="Fgw-eh-SOS"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="lVu-u6-SKd" secondAttribute="height" id="G2W-Vh-d6t"/>
+                            <constraint firstItem="jkf-uE-qJa" firstAttribute="leading" secondItem="Jei-bU-VpZ" secondAttribute="trailing" constant="8" symbolic="YES" id="HWy-ag-bsB"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="AHh-UW-d63" secondAttribute="height" id="IBL-lT-urs"/>
+                            <constraint firstItem="Gkn-65-HOe" firstAttribute="height" secondItem="Jei-bU-VpZ" secondAttribute="height" id="IBX-fB-NWv"/>
+                            <constraint firstItem="Gkn-65-HOe" firstAttribute="baseline" secondItem="Jei-bU-VpZ" secondAttribute="baseline" id="IMx-s4-JqW"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="leading" secondItem="g2c-XK-BpQ" secondAttribute="leading" id="JD5-bp-mEq"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="H15-E6-E0W" secondAttribute="height" id="K9Z-zc-N8Y"/>
+                            <constraint firstItem="wjV-c6-5ef" firstAttribute="leading" secondItem="GpX-YF-HEb" secondAttribute="leading" id="KJk-1C-ZiE"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="vUl-T5-Qgh" secondAttribute="width" id="KQa-Io-xKL"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="wjV-c6-5ef" secondAttribute="height" id="Kom-uO-62c"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="4LD-JK-XM5" secondAttribute="height" id="LEc-Uf-tT3"/>
+                            <constraint firstItem="aW2-tS-pbR" firstAttribute="leading" secondItem="ykP-98-iE9" secondAttribute="leading" id="LZQ-9u-Wdo"/>
+                            <constraint firstItem="lVu-u6-SKd" firstAttribute="leading" secondItem="GpX-YF-HEb" secondAttribute="leading" id="MFm-NW-HFo"/>
+                            <constraint firstItem="9td-Qi-Y67" firstAttribute="baseline" secondItem="lVu-u6-SKd" secondAttribute="baseline" id="Mk0-cy-SIY"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="jkf-uE-qJa" secondAttribute="width" id="Mmq-8a-oOY"/>
+                            <constraint firstItem="9td-Qi-Y67" firstAttribute="leading" secondItem="AHh-UW-d63" secondAttribute="leading" id="Ncq-aR-8OZ"/>
+                            <constraint firstItem="aW2-tS-pbR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="POO-Fc-3yl"/>
+                            <constraint firstItem="0Vv-l1-zhQ" firstAttribute="leading" secondItem="g2c-XK-BpQ" secondAttribute="leading" id="Puq-Hj-bAz"/>
+                            <constraint firstItem="vUl-T5-Qgh" firstAttribute="leading" secondItem="H15-E6-E0W" secondAttribute="leading" id="Qj3-l4-lNB"/>
+                            <constraint firstItem="0Vv-l1-zhQ" firstAttribute="leading" secondItem="wjV-c6-5ef" secondAttribute="trailing" constant="8" symbolic="YES" id="Qxw-QG-EOV"/>
+                            <constraint firstItem="w4X-x2-CgQ" firstAttribute="leading" secondItem="vUl-T5-Qgh" secondAttribute="trailing" constant="8" symbolic="YES" id="SMa-K8-oEI"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="erU-me-ORn" secondAttribute="height" id="SRa-Nz-3an"/>
+                            <constraint firstItem="H15-E6-E0W" firstAttribute="top" secondItem="vUl-T5-Qgh" secondAttribute="bottom" constant="8" symbolic="YES" id="SXM-hv-g60"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="lVu-u6-SKd" secondAttribute="width" id="ScZ-ZC-NKi"/>
+                            <constraint firstItem="AHh-UW-d63" firstAttribute="baseline" secondItem="eRe-cn-cQY" secondAttribute="baseline" id="U5B-mb-MOL"/>
+                            <constraint firstItem="wjV-c6-5ef" firstAttribute="leading" secondItem="w4X-x2-CgQ" secondAttribute="trailing" constant="8" symbolic="YES" id="UMv-d0-XZs"/>
+                            <constraint firstItem="vUl-T5-Qgh" firstAttribute="baseline" secondItem="w4X-x2-CgQ" secondAttribute="baseline" id="Wf1-dS-zti"/>
+                            <constraint firstItem="Gkn-65-HOe" firstAttribute="leading" secondItem="aW2-tS-pbR" secondAttribute="leading" id="YiH-8F-jal"/>
+                            <constraint firstItem="aW2-tS-pbR" firstAttribute="top" secondItem="ykP-98-iE9" secondAttribute="bottom" constant="8" symbolic="YES" id="Yy1-5c-usM"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="ykP-98-iE9" secondAttribute="height" id="Z5E-IM-0v9"/>
+                            <constraint firstItem="eRe-cn-cQY" firstAttribute="leading" secondItem="lVu-u6-SKd" secondAttribute="leading" id="Z6o-ef-TTe"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="H15-E6-E0W" secondAttribute="width" id="bU6-Mj-SX5"/>
+                            <constraint firstItem="ykP-98-iE9" firstAttribute="top" secondItem="H15-E6-E0W" secondAttribute="bottom" constant="8" symbolic="YES" id="cgQ-Hd-URq"/>
+                            <constraint firstItem="AHh-UW-d63" firstAttribute="baseline" secondItem="aW2-tS-pbR" secondAttribute="baseline" id="eXb-IO-aaG"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="erU-me-ORn" secondAttribute="width" id="jAk-CT-2O4"/>
+                            <constraint firstItem="Gkn-65-HOe" firstAttribute="height" secondItem="H15-E6-E0W" secondAttribute="height" id="jhk-GK-RwL"/>
+                            <constraint firstItem="RN9-U8-DMx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="jlB-vy-hP5"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="aW2-tS-pbR" secondAttribute="width" id="mDR-uj-JlO"/>
+                            <constraint firstItem="ykP-98-iE9" firstAttribute="leading" secondItem="H15-E6-E0W" secondAttribute="leading" id="mEE-ve-eW0"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="leading" secondItem="erU-me-ORn" secondAttribute="leading" id="nK8-jR-diY"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="4LD-JK-XM5" secondAttribute="width" id="oH6-Ao-PPn"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="9td-Qi-Y67" secondAttribute="height" id="pAV-6v-u0l"/>
+                            <constraint firstItem="Jei-bU-VpZ" firstAttribute="baseline" secondItem="jkf-uE-qJa" secondAttribute="baseline" id="pdS-pc-ma4"/>
+                            <constraint firstItem="eRe-cn-cQY" firstAttribute="baseline" secondItem="erU-me-ORn" secondAttribute="baseline" id="ptb-el-Dh7"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="g2c-XK-BpQ" secondAttribute="height" id="qMp-D8-N8b"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="eRe-cn-cQY" secondAttribute="width" id="qX6-A5-CFa"/>
+                            <constraint firstItem="RN9-U8-DMx" firstAttribute="leading" secondItem="vUl-T5-Qgh" secondAttribute="leading" id="qa7-kF-1H5"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="vUl-T5-Qgh" secondAttribute="height" id="qbg-r3-mhH"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="w4X-x2-CgQ" secondAttribute="height" id="qmc-t2-sK5"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="eRe-cn-cQY" secondAttribute="height" id="qwm-XM-RV8"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="baseline" secondItem="lVu-u6-SKd" secondAttribute="baseline" id="rDf-Ua-5JC"/>
+                            <constraint firstItem="0Vv-l1-zhQ" firstAttribute="baseline" secondItem="wjV-c6-5ef" secondAttribute="baseline" id="rUa-Fu-JMD"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="g2c-XK-BpQ" secondAttribute="width" id="sd7-af-pRw"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="GpX-YF-HEb" secondAttribute="height" id="sl5-BY-lhR"/>
+                            <constraint firstItem="Gkn-65-HOe" firstAttribute="top" secondItem="aW2-tS-pbR" secondAttribute="bottom" constant="8" symbolic="YES" id="tk6-AP-fgz"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="width" secondItem="w4X-x2-CgQ" secondAttribute="width" id="upG-Am-mKh"/>
+                            <constraint firstItem="h4U-Ip-8xm" firstAttribute="height" secondItem="0Vv-l1-zhQ" secondAttribute="height" id="uwo-fV-MO9"/>
+                            <constraint firstItem="g2c-XK-BpQ" firstAttribute="baseline" secondItem="GpX-YF-HEb" secondAttribute="baseline" id="wuR-wn-Ph0"/>
+                            <constraint firstItem="0Vv-l1-zhQ" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ynN-Jv-Op3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="RN9-U8-DMx"/>
+                                <exclude reference="Gkn-65-HOe"/>
+                                <exclude reference="jkf-uE-qJa"/>
+                                <exclude reference="erU-me-ORn"/>
+                                <exclude reference="eRe-cn-cQY"/>
+                                <exclude reference="AHh-UW-d63"/>
+                                <exclude reference="aW2-tS-pbR"/>
+                                <exclude reference="h4U-Ip-8xm"/>
+                                <exclude reference="lVu-u6-SKd"/>
+                                <exclude reference="9td-Qi-Y67"/>
+                                <exclude reference="ykP-98-iE9"/>
+                                <exclude reference="g2c-XK-BpQ"/>
+                                <exclude reference="GpX-YF-HEb"/>
+                                <exclude reference="4LD-JK-XM5"/>
+                                <exclude reference="H15-E6-E0W"/>
+                                <exclude reference="0Vv-l1-zhQ"/>
+                                <exclude reference="wjV-c6-5ef"/>
+                                <exclude reference="w4X-x2-CgQ"/>
+                                <exclude reference="vUl-T5-Qgh"/>
+                                <exclude reference="Jei-bU-VpZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="E7A-hT-HGT"/>
+                                <exclude reference="Puq-Hj-bAz"/>
+                                <exclude reference="Qxw-QG-EOV"/>
+                                <exclude reference="rUa-Fu-JMD"/>
+                                <exclude reference="ynN-Jv-Op3"/>
+                                <exclude reference="9mT-7n-PQM"/>
+                                <exclude reference="0mc-Ke-7gu"/>
+                                <exclude reference="Mk0-cy-SIY"/>
+                                <exclude reference="Ncq-aR-8OZ"/>
+                                <exclude reference="U5B-mb-MOL"/>
+                                <exclude reference="eXb-IO-aaG"/>
+                                <exclude reference="1fw-cq-tcL"/>
+                                <exclude reference="IBX-fB-NWv"/>
+                                <exclude reference="IMx-s4-JqW"/>
+                                <exclude reference="YiH-8F-jal"/>
+                                <exclude reference="jhk-GK-RwL"/>
+                                <exclude reference="tk6-AP-fgz"/>
+                                <exclude reference="9HD-bY-d4h"/>
+                                <exclude reference="1gt-o3-0cq"/>
+                                <exclude reference="SXM-hv-g60"/>
+                                <exclude reference="AGx-l9-t2C"/>
+                                <exclude reference="pdS-pc-ma4"/>
+                                <exclude reference="LZQ-9u-Wdo"/>
+                                <exclude reference="POO-Fc-3yl"/>
+                                <exclude reference="Yy1-5c-usM"/>
+                                <exclude reference="Z6o-ef-TTe"/>
+                                <exclude reference="ptb-el-Dh7"/>
+                                <exclude reference="wuR-wn-Ph0"/>
+                                <exclude reference="54l-9h-bBn"/>
+                                <exclude reference="7hd-oV-v8i"/>
+                                <exclude reference="8g4-Zi-zwI"/>
+                                <exclude reference="Alx-Cc-6hO"/>
+                                <exclude reference="CFV-Ib-ZH1"/>
+                                <exclude reference="Dbg-BP-lRb"/>
+                                <exclude reference="Eze-ro-wG0"/>
+                                <exclude reference="Fgw-eh-SOS"/>
+                                <exclude reference="G2W-Vh-d6t"/>
+                                <exclude reference="IBL-lT-urs"/>
+                                <exclude reference="JD5-bp-mEq"/>
+                                <exclude reference="K9Z-zc-N8Y"/>
+                                <exclude reference="KQa-Io-xKL"/>
+                                <exclude reference="Kom-uO-62c"/>
+                                <exclude reference="LEc-Uf-tT3"/>
+                                <exclude reference="Mmq-8a-oOY"/>
+                                <exclude reference="SRa-Nz-3an"/>
+                                <exclude reference="ScZ-ZC-NKi"/>
+                                <exclude reference="Z5E-IM-0v9"/>
+                                <exclude reference="bU6-Mj-SX5"/>
+                                <exclude reference="jAk-CT-2O4"/>
+                                <exclude reference="mDR-uj-JlO"/>
+                                <exclude reference="nK8-jR-diY"/>
+                                <exclude reference="oH6-Ao-PPn"/>
+                                <exclude reference="pAV-6v-u0l"/>
+                                <exclude reference="qMp-D8-N8b"/>
+                                <exclude reference="qX6-A5-CFa"/>
+                                <exclude reference="qbg-r3-mhH"/>
+                                <exclude reference="qmc-t2-sK5"/>
+                                <exclude reference="qwm-XM-RV8"/>
+                                <exclude reference="rDf-Ua-5JC"/>
+                                <exclude reference="sd7-af-pRw"/>
+                                <exclude reference="sl5-BY-lhR"/>
+                                <exclude reference="upG-Am-mKh"/>
+                                <exclude reference="uwo-fV-MO9"/>
+                                <exclude reference="9rD-K2-Q8c"/>
+                                <exclude reference="HWy-ag-bsB"/>
+                                <exclude reference="MFm-NW-HFo"/>
+                                <exclude reference="Eo5-D8-0YP"/>
+                                <exclude reference="Qj3-l4-lNB"/>
+                                <exclude reference="Wf1-dS-zti"/>
+                                <exclude reference="3ME-fy-K9V"/>
+                                <exclude reference="Eqm-UI-Zps"/>
+                                <exclude reference="SMa-K8-oEI"/>
+                                <exclude reference="KJk-1C-ZiE"/>
+                                <exclude reference="UMv-d0-XZs"/>
+                                <exclude reference="3jG-6P-7tH"/>
+                                <exclude reference="cgQ-Hd-URq"/>
+                                <exclude reference="mEE-ve-eW0"/>
+                                <exclude reference="jlB-vy-hP5"/>
+                                <exclude reference="qa7-kF-1H5"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="RN9-U8-DMx"/>
+                                <include reference="Gkn-65-HOe"/>
+                                <include reference="jkf-uE-qJa"/>
+                                <include reference="erU-me-ORn"/>
+                                <include reference="eRe-cn-cQY"/>
+                                <include reference="AHh-UW-d63"/>
+                                <include reference="aW2-tS-pbR"/>
+                                <include reference="h4U-Ip-8xm"/>
+                                <include reference="lVu-u6-SKd"/>
+                                <include reference="9td-Qi-Y67"/>
+                                <include reference="ykP-98-iE9"/>
+                                <include reference="g2c-XK-BpQ"/>
+                                <include reference="GpX-YF-HEb"/>
+                                <include reference="4LD-JK-XM5"/>
+                                <include reference="H15-E6-E0W"/>
+                                <include reference="0Vv-l1-zhQ"/>
+                                <include reference="wjV-c6-5ef"/>
+                                <include reference="w4X-x2-CgQ"/>
+                                <include reference="vUl-T5-Qgh"/>
+                                <include reference="Jei-bU-VpZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="E7A-hT-HGT"/>
+                                <include reference="Puq-Hj-bAz"/>
+                                <include reference="Qxw-QG-EOV"/>
+                                <include reference="rUa-Fu-JMD"/>
+                                <include reference="ynN-Jv-Op3"/>
+                                <include reference="9mT-7n-PQM"/>
+                                <include reference="0mc-Ke-7gu"/>
+                                <include reference="Mk0-cy-SIY"/>
+                                <include reference="Ncq-aR-8OZ"/>
+                                <include reference="U5B-mb-MOL"/>
+                                <include reference="eXb-IO-aaG"/>
+                                <include reference="1fw-cq-tcL"/>
+                                <include reference="IBX-fB-NWv"/>
+                                <include reference="IMx-s4-JqW"/>
+                                <include reference="YiH-8F-jal"/>
+                                <include reference="jhk-GK-RwL"/>
+                                <include reference="tk6-AP-fgz"/>
+                                <include reference="9HD-bY-d4h"/>
+                                <include reference="1gt-o3-0cq"/>
+                                <include reference="SXM-hv-g60"/>
+                                <include reference="AGx-l9-t2C"/>
+                                <include reference="pdS-pc-ma4"/>
+                                <include reference="LZQ-9u-Wdo"/>
+                                <include reference="POO-Fc-3yl"/>
+                                <include reference="Yy1-5c-usM"/>
+                                <include reference="Z6o-ef-TTe"/>
+                                <include reference="ptb-el-Dh7"/>
+                                <include reference="wuR-wn-Ph0"/>
+                                <include reference="54l-9h-bBn"/>
+                                <include reference="7hd-oV-v8i"/>
+                                <include reference="8g4-Zi-zwI"/>
+                                <include reference="Alx-Cc-6hO"/>
+                                <include reference="CFV-Ib-ZH1"/>
+                                <include reference="Dbg-BP-lRb"/>
+                                <include reference="Eze-ro-wG0"/>
+                                <include reference="Fgw-eh-SOS"/>
+                                <include reference="G2W-Vh-d6t"/>
+                                <include reference="IBL-lT-urs"/>
+                                <include reference="JD5-bp-mEq"/>
+                                <include reference="K9Z-zc-N8Y"/>
+                                <include reference="KQa-Io-xKL"/>
+                                <include reference="Kom-uO-62c"/>
+                                <include reference="LEc-Uf-tT3"/>
+                                <include reference="Mmq-8a-oOY"/>
+                                <include reference="SRa-Nz-3an"/>
+                                <include reference="ScZ-ZC-NKi"/>
+                                <include reference="Z5E-IM-0v9"/>
+                                <include reference="bU6-Mj-SX5"/>
+                                <include reference="jAk-CT-2O4"/>
+                                <include reference="mDR-uj-JlO"/>
+                                <include reference="nK8-jR-diY"/>
+                                <include reference="oH6-Ao-PPn"/>
+                                <include reference="pAV-6v-u0l"/>
+                                <include reference="qMp-D8-N8b"/>
+                                <include reference="qX6-A5-CFa"/>
+                                <include reference="qbg-r3-mhH"/>
+                                <include reference="qmc-t2-sK5"/>
+                                <include reference="qwm-XM-RV8"/>
+                                <include reference="rDf-Ua-5JC"/>
+                                <include reference="sd7-af-pRw"/>
+                                <include reference="sl5-BY-lhR"/>
+                                <include reference="upG-Am-mKh"/>
+                                <include reference="uwo-fV-MO9"/>
+                                <include reference="9rD-K2-Q8c"/>
+                                <include reference="HWy-ag-bsB"/>
+                                <include reference="MFm-NW-HFo"/>
+                                <include reference="Eo5-D8-0YP"/>
+                                <include reference="Qj3-l4-lNB"/>
+                                <include reference="Wf1-dS-zti"/>
+                                <include reference="3ME-fy-K9V"/>
+                                <include reference="Eqm-UI-Zps"/>
+                                <include reference="SMa-K8-oEI"/>
+                                <include reference="KJk-1C-ZiE"/>
+                                <include reference="UMv-d0-XZs"/>
+                                <include reference="3jG-6P-7tH"/>
+                                <include reference="cgQ-Hd-URq"/>
+                                <include reference="mEE-ve-eW0"/>
+                                <include reference="jlB-vy-hP5"/>
+                                <include reference="qa7-kF-1H5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="displayView" destination="RN9-U8-DMx" id="piL-Gr-FkJ"/>
+                        <outlet property="lblDisplay" destination="Htm-oa-LMk" id="PKU-bS-Ts1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
